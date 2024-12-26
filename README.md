@@ -550,6 +550,18 @@ Map<T, E> hm1 = new HashMap<T, E>();
 Map<E, E> hm2 = new HashMap<E, E>();
 ```
 
+* Some important ones:
+```java
+//computeIfAbsent below is example
+//The computeIfAbsent method in Java is a utility provided by the Map interface. It simplifies the process of checking for the presence of a key in a map and initializing a value if the key does not already exist.
+
+public int[] findOrder(int numCourses, int[][] prerequisites) {
+        Map<Integer, List<Integer>> prereq = new HashMap<>();
+        for (int[] pair : prerequisites) {
+            prereq.computeIfAbsent(pair[0], 
+                k -> new ArrayList<>()).add(pair[1]);
+        }
+```
 Let us see the output of the code for a `HashMap`, `TreeMap` and a `LinkedHashMap`:
 
 ### `Implementation of a HashMap:`
