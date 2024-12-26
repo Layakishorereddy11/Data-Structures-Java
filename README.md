@@ -812,6 +812,10 @@ public class Test {
 
 # Trees:
 
+Tree Properties:
+A tree is an acyclic connected graph.
+A tree with n nodes must have exactly n - 1 edges.
+
 ### Tree:
 
 * Binary Tree
