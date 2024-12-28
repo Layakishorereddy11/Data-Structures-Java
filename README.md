@@ -397,13 +397,14 @@ public void addNodeToTail(int addData){
 | 07 | Reversing the LinkedList and returning the Head Node | [Program File](LinkedLists/ReverseLinkedList.java) |
 
 ---------------------------------------------------------------------------------------------
-# Stacks and Queues:
+# Stacks and Queues, PriorityQueue:
 
 Stack is a class in Java while Queue is an Interface, so both will have different kinds of declaration. Stack will have a regular declaration of Java class initialization while Queue Interface can be implemented with a LinkedList.</br>
 
 ```
 Stack<T> stack = new Stack<T>();
 Queue<T> queue = new LinkedList<T>();
+PriorityQueue<int[]> minHeap = new PriorityQueue<>(Comparator.comparingInt(a -> a[0]));
 ```
 
 **Time Complexity**: Stack based operation such as pop(), push(), peek() takes **O(1)** time. Queue based operations such as add(), poll(), peek() also takes **O(1)** time. It means that the time taken for Stack operations and Queue operations is constant.
