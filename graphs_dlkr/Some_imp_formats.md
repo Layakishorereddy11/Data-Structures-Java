@@ -1,3 +1,13 @@
+### Algorithms:
+
+- **Dijkstra**: From a single source, find shortest paths to all nodes. Works on both directed and undirected graphs with non-negative edge weights. Greedy approach.
+- **Floyd-Warshall**: Shortest path from every node as a source.
+- **Bellman-Ford**: Same as Dijkstra, but works for negative weights. Works on both directed and undirected graphs with non-negative edge weights as well as directed graphs with negative edge weights as long as no negative cycles are present. Dynamic Programming approach.
+- **Topological Sort**: Print the nodes with no incoming edges first.
+- **MST (Minimum Spanning Tree)**: Connect all the nodes with minimum costs (n nodes // n-1 edges).
+  - **Prim's Algorithm**: Build the MST by starting from any node and expanding the tree one edge at a time.
+  - **Kruskal's Algorithm**: Build the MST by sorting all edges and adding them one by one, ensuring no cycles are formed.
+
 ### AdjacencyList:
 
 #### Min Cost to Connect Points
