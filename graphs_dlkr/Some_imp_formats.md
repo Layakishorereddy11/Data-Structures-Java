@@ -6,13 +6,13 @@
 - **Topological Sort**: Print the nodes with no incoming edges first.
 - **MST (Minimum Spanning Tree)**: Connect all the nodes with minimum costs (n nodes // n-1 edges).
   - **Prim's Algorithm**: Build the MST by starting from any node and expanding the tree one edge at a time.
-  - **Kruskal's Algorithm**: Build the MST by sorting all edges and adding them one by one, ensuring no cycles are formed.
+  - **Kruskal's Algorithm**: Build the MST by sorting all edges and adding them one by one, ensuring no cycles are formed.(using disjoint datastructure to find common parent and decide wheather it is a connected component and Union to get rank and connect them(Refer Disjoint and Union datastructure))
 
 - **Dijkstra**: Works on both directed and undirected graph with non-negative edge weights, Greedy approach
 -**Bellman Ford**: Works on both directed and undirected graph with non-negative edge weights as well as directed graph with negative edge weights as long as no negative cycles are present, Dynamic Programming approach
 ### AdjacencyList:
 
-#### Min Cost to Connect Points
+#### Min Cost to Connect Points (Prim algorithm example)
 
 You are given a 2-D integer array `points`, where `points[i] = [xi, yi]`. Each `points[i]` represents a distinct point on a 2-D plane.
 
