@@ -563,10 +563,37 @@ public int[] findOrder(int numCourses, int[][] prerequisites) {
                 k -> new ArrayList<>()).add(pair[1]);
         }
 //getOrDefault
-TreeMap<Integer, Integer> cardCounts = new TreeMap<>();
+class Solution {
+    public boolean isNStraightHand(int[] hand, int groupSize) {
+        if (hand.length % groupSize != 0) {
+            return false; 
+        }
+
+        TreeMap<Integer, Integer> cardCounts = new TreeMap<>();
         for (int card : hand) {
             cardCounts.put(card, cardCounts.getOrDefault(card, 0) + 1);
         }
+
+        while (!cardCounts.isEmpty()) {
+            int firstCard = cardCounts.firstKey(); 
+            for(int i=0;i<groupSize;i++){
+                if(cardCounts.containsKey(firstCard)){
+                    cardCounts.put(firstCard, cardCounts.get(firstCard) - 1);
+                    if (cardCounts.get(firstCard) == 0) {
+                        cardCounts.remove(firstCard); 
+                    }
+                    firstCard++;
+                }else{
+                    return false;
+                }
+            }
+
+        }
+        return true;
+
+    }
+}
+
 ```
 Let us see the output of the code for a `HashMap`, `TreeMap` and a `LinkedHashMap`:
 
