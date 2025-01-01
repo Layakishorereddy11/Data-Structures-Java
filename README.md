@@ -562,6 +562,11 @@ public int[] findOrder(int numCourses, int[][] prerequisites) {
             prereq.computeIfAbsent(pair[0], 
                 k -> new ArrayList<>()).add(pair[1]);
         }
+//getOrDefault
+TreeMap<Integer, Integer> cardCounts = new TreeMap<>();
+        for (int card : hand) {
+            cardCounts.put(card, cardCounts.getOrDefault(card, 0) + 1);
+        }
 ```
 Let us see the output of the code for a `HashMap`, `TreeMap` and a `LinkedHashMap`:
 
