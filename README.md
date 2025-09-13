@@ -518,6 +518,38 @@ while(it.hasNext()){
 ```
 8 7 6 1 2
 ```
+### Using contains in set
+```java
+import java.util.HashSet;
+import java.util.Set;
+
+public class SetContainsExample {
+    public static void main(String[] args) {
+        // Create a Set of Strings using HashSet implementation
+        Set<String> fruits = new HashSet<>();
+
+        // Add elements to the set
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Orange");
+
+        // Check if the set contains specific elements
+        boolean containsApple = fruits.contains("Apple");
+        boolean containsGrape = fruits.contains("Grape");
+        boolean containsNull = fruits.contains(null); // Checking for null
+
+        // Add null to the set and check again
+        fruits.add(null);
+        boolean containsNullAfterAdd = fruits.contains(null);
+
+        // Print the results
+        System.out.println("Does the set contain 'Apple'? " + containsApple); // true
+        System.out.println("Does the set contain 'Grape'? " + containsGrape); // false
+        System.out.println("Does the set contain null (before adding)? " + containsNull); // false
+        System.out.println("Does the set contain null (after adding)? " + containsNullAfterAdd); // true
+    }
+}
+```
 
 #### `Set Operations:`
 
